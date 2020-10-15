@@ -12,7 +12,6 @@ public class Personne {
     
     private String validate(String chaine, Integer taille) {
 
-
         // Vérifie la taille et renvoie une chaîne tronquée
         // si la taille est supérieure à taille
 

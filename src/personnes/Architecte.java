@@ -13,6 +13,7 @@ public class Architecte extends Personne {
     this.conseilRegional = conseilRegional;
     this.inscriptionOrdre = inscriptionOrdre;
     this.adresse = adresse;
+    this.telephone = telephone;
 
     if (telephoneValide(telephone)) {
       this.telephone = telephone;
@@ -22,13 +23,14 @@ public class Architecte extends Personne {
     }
     Maj_conseilRegional();
   }
-  
+
   private boolean telephoneValide(String telephone) { //boolean : m
 	  //partir sur 0.6.25.41.25 (10 chiffre séparés par un point)
 	 
   }
   
   public boolean Maj_conseilRegional() {//renvoie un boolean la mise à jour à été faite = si la variable n'est pas nul
+
 	  
 	  if(this.conseilRegional != null) {
 		  return true;
@@ -38,7 +40,34 @@ public class Architecte extends Personne {
 	  }
 }
 
+  public String getConseilRegional(){
+	  
+  }
+
+  public void SetConseilRegional(String conseilRegional) {}
+  
+  public boolean isInscriptionOrdre() {}
+  
+  public void setInscriptionOrdre(boolean inscriptionOrdre) {}
+  
+  public Adresse getAdress() {
+	  
+  }
+  
+  public void setAdresse(Adresse adresse) {
+	  
+  }
+
+  public String getTelephone() {
+	  
+  }
+  
+  public void setTelephone(String telephone) {
+	  
+  }
+
   public String toString() {
+
 
     // renvoie une chaine contenant le nom, le prenom, le conseil regional et
     // le numero de telephone de l'architecte ainsi que la mention "inscrit"
@@ -47,4 +76,5 @@ public class Architecte extends Personne {
     chaine = chaine + this.conseilRegional + " ";
     return chaine;
   }
+
 }

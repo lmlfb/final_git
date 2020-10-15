@@ -20,3 +20,5 @@ Comment on appelle un clazsse dabs une autre classe sachant qu'il n(y a aucun h�
 ne pas faire les truc avec connexion
 
 il faut que la classe artitechte prévoit un moyen de stocker tous les déposants appartenant à une artictechte avec array liste <>
+
+static and final
