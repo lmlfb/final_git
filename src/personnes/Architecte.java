@@ -1,11 +1,14 @@
 package personnes;
 
+import java.util.regex.Pattern;
+
 public class Architecte extends Personne {
 
   private String conseilRegional;
   private boolean inscriptionOrdre;
   private Adresse adresse;
-  String telephone;
+  private String telephone;
+  
 
   public Architecte(String nom, String prenom, String conseilRegional, boolean inscriptionOrdre, Adresse adresse, String telephone) {
     
@@ -25,13 +28,16 @@ public class Architecte extends Personne {
   }
 
   private boolean telephoneValide(String telephone) { //boolean : m
-	  //partir sur 0.6.25.41.25 (10 chiffre séparés par un point)
-	 
+	  //on compare le numero en paramètre au modèle d'un numéro de 10 chiffres séparés par un point
+	  if(telephone.length() == 14 && Pattern.matches("[0-9]{2}[.][0-9]{2}[.][0-9]{2}[.][0-9]{2}[.][0-9]{2}", telephone) ) {
+		  return true;
+	  }
+	  else {
+		 return false; 
+	  }
   }
   
   public boolean Maj_conseilRegional() {//renvoie un boolean la mise à jour à été faite = si la variable n'est pas nul
-
-	  
 	  if(this.conseilRegional != null) {
 		  return true;
 	  }
@@ -41,21 +47,27 @@ public class Architecte extends Personne {
 }
 
   public String getConseilRegional(){
-	  
+	  return this.conseilRegional;	  
   }
 
-  public void SetConseilRegional(String conseilRegional) {}
+  public void SetConseilRegional(String conseilRegional) {
+	  this.conseilRegional = conseilRegional;
+  }
   
-  public boolean isInscriptionOrdre() {}
+  public boolean isInscriptionOrdre() {
+	  return this.inscriptionOrdre;
+  }
   
-  public void setInscriptionOrdre(boolean inscriptionOrdre) {}
+  public void setInscriptionOrdre(boolean inscriptionOrdre) {
+	  this.inscriptionOrdre = inscriptionOrdre;
+  }
   
   public Adresse getAdress() {
-	  
+	  return this.adresse;
   }
   
   public void setAdresse(Adresse adresse) {
-	  
+	  this.adresse = adresse;
   }
 
   public String getTelephone() {
