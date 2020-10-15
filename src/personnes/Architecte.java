@@ -105,8 +105,8 @@ public class Architecte extends Personne {
 	  this.listeClients.add(deposant);
   }
   
-  public void getListeClient() {
-	  
+  public ArrayList<Deposant> getListeClient() {
+	  return listeClients;
   }
   	
 }

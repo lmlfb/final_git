@@ -40,5 +40,12 @@ public class Adresse {
 			return false;
 		}
 	}
+	
+	
+	public String getAdress() {
+		
+		return "Numero : " +this.numero + " Voie : " + this.voie + " Ville : "+ this.ville + " code postal : " + this.codePostal + " Boîte postal : " + this.bp + " Lieu dit : " + this.lieuDit + " Cedex : " + this.cedex;
+
+	}
 
 }

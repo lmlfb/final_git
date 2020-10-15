@@ -23,6 +23,6 @@ public class Deposant extends Personne{
 	
 	public String toString() {
 		
-		return super.toString() + " " + this.civilite + " " + this.adresseMessagerie + " " + this.adresse;
+		return super.toString() + " " + this.civilite + " " + this.adresseMessagerie + " " + this.adresse.getAdress();
 	}
 }
