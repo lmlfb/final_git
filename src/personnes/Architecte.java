@@ -9,7 +9,7 @@ public class Architecte extends Personne {
   private boolean inscriptionOrdre;
   private Adresse adresse;
   private String telephone;
-  private ArrayList<Adresse> deposantsClients  = new ArrayList<Adresse>();;
+  private ArrayList<Deposant> listeClients;
   
 
   public Architecte(String nom, String prenom, String conseilRegional, boolean inscriptionOrdre, Adresse adresse, String telephone) {
@@ -27,6 +27,9 @@ public class Architecte extends Personne {
       this.telephone = "";
     }
     Maj_conseilRegional();
+    
+    listeClients = new ArrayList<Deposant>();
+    
   }
 
   private boolean telephoneValide(String telephone) { //boolean : m
@@ -98,5 +101,12 @@ public class Architecte extends Personne {
     return chaine;
   }
   	
+  public void listeClients(Deposant deposant) {
+	  this.listeClients.add(deposant);
+  }
+  
+  public void getListeClient() {
+	  
+  }
   	
 }
