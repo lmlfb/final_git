@@ -26,8 +26,8 @@ public class Architecte extends Personne {
     else {
       this.telephone = "";
     }
-    Maj_conseilRegional();
     
+    Maj_conseilRegional();
     listeClients = new ArrayList<Deposant>();
     
   }
@@ -101,12 +101,22 @@ public class Architecte extends Personne {
     return chaine;
   }
   	
-  public void listeClients(Deposant deposant) {
+  public void addClients(Deposant deposant) {
 	  this.listeClients.add(deposant);
   }
   
   public ArrayList<Deposant> getListeClient() {
-	  return listeClients;
+	  return this.listeClients;
+  }
+  
+  public void printListeClient() {
+	  System.out.print("----Liste Client----\n");
+	  for(int i=0; i<this.listeClients.size();i++) {
+		  System.out.print("Client "+ i + ": ");
+		  System.out.print(this.listeClients.get(i).getIdentite());
+		  System.out.print("\n");
+	  }
+	  System.out.print("\n");
   }
   	
 }

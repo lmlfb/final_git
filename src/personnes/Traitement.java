@@ -15,8 +15,13 @@ public class Traitement {
 		//String nom, String prenom, Adresse adresse
 		Deposant deposant1 = new Deposant("Bill", "Makin", adresseClient1);
 		Deposant deposant2 = new Deposant("Rose", "Betz", adresseClient2);
-		Architecte architecte1 = new Architecte("Dupond", "Nicolas", "Seine-Maritime", true, adresseDupond, "09.65.45.96.54");
+		Architecte architecte1 = new Architecte("Dupond", "Nicolas", "Seine-Maritime", false, adresseDupond, "09.65.45.96.54");
+		architecte1.setInscriptionOrdre(true);
 		Architecte architecte2 = new Architecte("John", "Thomas", "Alpes-de-Haute-Provence", false, adresseThomas, "09.65.455.96.54");
+		
+		//On ajoute des clients à l'architecte 1
+		architecte1.addClients(deposant1);
+		architecte1.addClients(deposant2);
 		
 		System.out.print(architecte1.toString()+"\n");
 		
@@ -28,10 +33,15 @@ public class Traitement {
 		
 		deposant2.setCivilite("Femme");
 		deposant2.setAdresseMessagerie("rose.betz@outlook.com");
-			
-		System.out.print(architecte1.toString()+"\n");
+
 		System.out.print(deposant1.toString()+"\n");
 		System.out.print(deposant2.toString()+"\n");
+		
+		architecte1.printListeClient();
+		
+		//quelle est l'adresse de l'architecte1 ?
+		System.out.print(architecte1.getAdress().getAdress());
+		
 		
 
 	}
