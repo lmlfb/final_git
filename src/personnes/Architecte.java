@@ -28,6 +28,7 @@ public class Architecte extends Personne {
     }
     
     Maj_conseilRegional();
+    
     listeClients = new ArrayList<Deposant>();
     
   }
@@ -42,7 +43,7 @@ public class Architecte extends Personne {
 	  }
   }
   
-  public boolean Maj_conseilRegional() {//renvoie un boolean la mise à jour à été faite = si la variable n'est pas nul
+  public boolean Maj_conseilRegional() {
 	  if(this.conseilRegional != null) {
 		  return true;
 	  }

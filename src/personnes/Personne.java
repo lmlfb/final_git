@@ -2,8 +2,8 @@ package personnes;
 
 public class Personne {
 
-    protected String nom;
-    protected String prenom;
+    private String nom;
+    private String prenom;
     
     public Personne(String nom, String prenom) {
         this.nom = validate(nom, 50);
@@ -22,6 +22,14 @@ public class Personne {
     
     public String toString() {
         return this.nom + " " + this.prenom;
+    }
+    
+    public String getNom() {
+    	return this.nom;
+    }
+    
+    public String getPrenom() {
+    	return this.prenom;
     }
 
 }

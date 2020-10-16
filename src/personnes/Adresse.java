@@ -2,13 +2,13 @@ package personnes;
 
 public class Adresse {
 	
-	public String numero;
-	public String voie;
-	public String ville;
-	public String codePostal;
-	public String bp;
-	public String lieuDit;
-	public String cedex;
+	private String numero;
+	private String voie;
+	private String ville;
+	private String codePostal;
+	private String bp;
+	private String lieuDit;
+	private String cedex;
 	
 	public Adresse() {
 		
@@ -25,26 +25,26 @@ public class Adresse {
 		
 		this.numero=numero;
 		this.voie = voie;
-		this.ville = ville;
+		this.ville = validate(ville, 50);
 		this.codePostal = codePostal;
-		this.bp = bp;
-		this.lieuDit = lieuDit;
-		this.cedex = cedex;
+		this.bp = validate(bp, 50);
+		this.lieuDit = validate(lieuDit, 50);
+		this.cedex = validate(cedex, 50);
 	}
 	
-	public boolean validate(String chaine, Integer taille) {
-		if(chaine.length()==taille) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-	
+    private String validate(String chaine, Integer taille) {
+    	
+        if (chaine.length() <= taille) {
+            return chaine;
+        } else {
+            chaine = chaine.substring(0, taille);
+            return chaine;
+        }
+    }
 	
 	public String getAdress() {
 		
-		return "Numero : " +this.numero + " Voie : " + this.voie + " Ville : "+ this.ville + " code postal : " + this.codePostal + " Boîte postal : " + this.bp + " Lieu dit : " + this.lieuDit + " Cedex : " + this.cedex;
+		return "Numero:" +this.numero + " Voie:" + this.voie + " Ville:"+ this.ville + " code postal:" + this.codePostal + " Boîte postal:" + this.bp + " Lieu dit:" + this.lieuDit + " Cedex:" + this.cedex;
 
 	}
 

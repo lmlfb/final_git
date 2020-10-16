@@ -40,6 +40,7 @@ public class Traitement {
 		architecte1.printListeClient();
 		
 		//quelle est l'adresse de l'architecte1 ?
+		System.out.print("L'adresse de "+architecte1.getNom()+" est ");
 		System.out.print(architecte1.getAdress().getAdress());
 		
 		
